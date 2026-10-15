@@ -42,18 +42,15 @@ function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-18 sm:h-20">
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-none group">
-            <div className="flex items-center gap-1.5">
-              <svg width="26" height="26" viewBox="0 0 28 28" fill="none" className="group-hover:scale-110 transition-transform">
-                <path d="M14 4L2 10L14 16L26 10Z" fill="#3B82F6" />
-                <path d="M2 10V17" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" />
-                <path d="M8 13V19C8 19 10 22 14 22C18 22 20 19 20 19V13" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              <span className="text-xl font-extrabold"><span className="text-blue-500">Campus</span><span className="text-slate-800">Pe</span></span>
-            </div>
-            <span className="text-[9px] text-slate-400 tracking-wide ml-8">Connecting Students, Institutions &amp; Companies</span>
+          <Link href="/" className="flex items-center gap-2 group py-1">
+            {/* Real CampusPe Logo */}
+            <img
+              src="/images/01-hero/campus_pe logo.png"
+              alt="CampusPe"
+              className="h-11 sm:h-13 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform"
+            />
           </Link>
           {/* Desktop links */}
           <ul className="hidden md:flex items-center gap-8">
@@ -98,25 +95,36 @@ function Navbar() {
 /* ─────────────────────────── HERO ─────────────────────────── */
 function Hero() {
   return (
-    <section className="relative overflow-hidden py-10 sm:py-14 md:py-20" style={{ background: "radial-gradient(ellipse 90% 70% at 50% 0%,#dbeafe 0%,transparent 65%),#fff" }}>
+    <section className="relative overflow-hidden pt-10 sm:pt-14 md:pt-16 pb-4 sm:pb-6" style={{ background: "radial-gradient(ellipse 90% 70% at 50% 0%,#dbeafe 0%,transparent 65%),#fff" }}>
       <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: "radial-gradient(#3b82f6 1px,transparent 1px)", backgroundSize: "28px 28px" }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-start justify-between gap-4">
-          {/* Left float card */}
+        {/* Top Hero Row with Floating Cards & Central Headline */}
+        <div className="flex items-center justify-between gap-4 lg:gap-8">
+          {/* Left float card - WhatsApp */}
           <div className="hidden lg:block w-52 flex-shrink-0 anim-float">
-            <div className="bg-white border border-green-100 rounded-2xl shadow-lg p-4">
+            <div className="bg-white border border-blue-200 rounded-2xl shadow-md p-4">
               <div className="flex items-center gap-2 mb-2">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
+                <img
+                  src="/images/01-hero/whatsapp logo.png"
+                  alt="WhatsApp"
+                  className="w-5 h-5 object-contain"
+                />
                 <span className="text-[13px] font-bold text-green-500">WhatsApp Alert</span>
               </div>
               <p className="text-[13px] font-semibold text-slate-800 mb-1">Get notified on whatsapp</p>
               <p className="text-[11.5px] text-slate-400 leading-relaxed">You&apos;ll get all important updates on your whatsapp</p>
             </div>
           </div>
-          {/* Center */}
-          <div className="flex-1 flex flex-col items-center text-center">
-            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 rounded-full px-4 py-2 shadow-md mb-6 sm:mb-8">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M12 11V7" /><circle cx="12" cy="5" r="2" /><circle cx="8" cy="16" r="1" fill="#3B82F6" stroke="none" /><circle cx="16" cy="16" r="1" fill="#3B82F6" stroke="none" /><path d="M9 19.5h6" /></svg>
+
+          {/* Center Column: Headline & Subtitle */}
+          <div className="flex-1 flex flex-col items-center text-center max-w-2xl mx-auto">
+            {/* AI Assistant Pill */}
+            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 rounded-full px-4 py-2 shadow-sm mb-6 sm:mb-8">
+              <img
+                src="/images/01-hero/bot logo.png"
+                alt="AI Assistant"
+                className="w-4 h-4 object-contain"
+              />
               <span className="text-[13px] font-semibold text-slate-700">AI-Powered Campus Assistant</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-extrabold text-slate-900 leading-[1.1] tracking-tight">
@@ -125,42 +133,73 @@ function Hero() {
                 10X Faster.
               </span>
             </h1>
-            <p className="mt-4 text-base sm:text-lg md:text-xl text-slate-500 max-w-md mx-auto leading-relaxed">One platform connecting students, colleges &amp; employers — faster.</p>
-            {/* Bottom badge row */}
-            <div className="mt-8 sm:mt-10 w-full flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-3 bg-white rounded-xl border border-slate-200 shadow-md px-3.5 py-2.5 hover:shadow-lg transition-shadow">
-                <div className="flex -space-x-2">
-                  {[["AK","#3B82F6"],["PK","#8B5CF6"],["SN","#10B981"]].map(([init,bg])=>(
-                    <div key={init} style={{ background: bg }} className="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center text-[9px] font-bold text-white">{init}</div>
-                  ))}
-                </div>
-                <div><p className="text-[13px] font-bold text-slate-800">🔥 142 students matched today</p><p className="text-[11px] text-slate-400">Just now • IIT, BITS, VIT</p></div>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg width="16" height="16" viewBox="0 0 18 18" fill="#60A5FA" className="anim-twinkle"><path d="M9 0 L10.2 7.8 L18 9 L10.2 10.2 L9 18 L7.8 10.2 L0 9 L7.8 7.8 Z" /></svg>
-                <span className="text-[17px] sm:text-[19px] font-bold text-blue-500 whitespace-nowrap">What are you looking for?</span>
-                <svg width="16" height="16" viewBox="0 0 18 18" fill="#60A5FA" className="anim-twinkle-alt"><path d="M9 0 L10.2 7.8 L18 9 L10.2 10.2 L9 18 L7.8 10.2 L0 9 L7.8 7.8 Z" /></svg>
-              </div>
-              <div className="flex items-center gap-3 bg-white rounded-xl border border-slate-200 shadow-md px-3.5 py-2.5 hover:shadow-lg transition-shadow">
-                <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" fill="rgba(255,255,255,0.2)" /><line x1="3" y1="9" x2="21" y2="9" stroke="white" strokeWidth="1.5" strokeOpacity="0.7" /><line x1="9" y1="21" x2="9" y2="9" stroke="white" strokeWidth="1.5" strokeOpacity="0.7" /></svg>
-                </div>
-                <div>
-                  <p className="text-[13px] font-semibold text-slate-800"><span className="text-blue-500">Radiant Info</span> shortlisted 8 interns</p>
-                  <div className="flex items-center gap-1.5 mt-0.5"><span className="w-1.5 h-1.5 bg-green-400 rounded-full inline-block" /><span className="text-[11px] text-slate-400">Verified recruiter • 2 days ago</span></div>
-                </div>
-              </div>
-            </div>
+            <p className="mt-4 text-base sm:text-lg md:text-xl text-slate-500 max-w-md mx-auto leading-relaxed">
+              One platform connecting students, colleges &amp; employers — faster.
+            </p>
           </div>
-          {/* Right float card */}
+
+          {/* Right float card - Resume Builder */}
           <div className="hidden lg:block w-52 flex-shrink-0 anim-float-slow">
-            <div className="bg-white border border-purple-100 rounded-2xl shadow-lg p-4">
+            <div className="bg-white border border-purple-200 rounded-2xl shadow-md p-4">
               <div className="flex items-center gap-2 mb-2">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>
                 <span className="text-[13px] font-bold text-amber-500">Resume Builder</span>
               </div>
               <p className="text-[13px] font-semibold text-slate-800 mb-1">Build Your Resume</p>
               <p className="text-[11.5px] text-slate-400 leading-relaxed">Our resume builder gives you dynamic options to build better &amp; faster resume that got you hired</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom badge row - Spans full width matching the 3 cards below, no overlap */}
+        <div className="mt-10 sm:mt-14 w-full flex flex-col md:flex-row items-center justify-between gap-5 lg:gap-8">
+          {/* Students matched badge */}
+          <div className="flex items-center gap-3 bg-white rounded-xl border border-slate-200 shadow-md px-3.5 py-2.5 hover:shadow-lg transition-shadow">
+            <img
+              src="/images/01-hero/students icon.png"
+              alt="Students Matched"
+              className="h-7 w-auto object-contain"
+            />
+            <div className="text-left">
+              <p className="text-[13px] font-bold text-slate-800">🔥 142 students matched today</p>
+              <p className="text-[11px] text-slate-400">Just now • IIT, BITS, VIT</p>
+            </div>
+          </div>
+
+          {/* What are you looking for + Double Sparkles */}
+          <div className="flex items-center gap-3 px-4 flex-shrink-0">
+            <img
+              src="/images/01-hero/Left Double Sparkle Icon.png"
+              alt="Sparkles"
+              className="w-5 h-5 object-contain anim-twinkle"
+            />
+            <span className="text-[17px] sm:text-[19px] font-bold text-blue-500 whitespace-nowrap">
+              What are you looking for?
+            </span>
+            <img
+              src="/images/01-hero/Right Double Sparkle Icon.png"
+              alt="Sparkles"
+              className="w-5 h-5 object-contain anim-twinkle-alt"
+            />
+          </div>
+
+          {/* Radiant Info badge */}
+          <div className="flex items-center gap-3 bg-white rounded-xl border border-slate-200 shadow-md px-3.5 py-2.5 hover:shadow-lg transition-shadow">
+            <div className="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0 p-1 border border-blue-100">
+              <img
+                src="/images/01-hero/radient info icon.png"
+                alt="Radiant Info"
+                className="w-7 h-7 object-contain"
+              />
+            </div>
+            <div className="text-left">
+              <p className="text-[13px] font-semibold text-slate-800">
+                <span className="text-blue-500">Radiant Info</span> shortlisted 8 interns
+              </p>
+              <div className="flex items-center gap-1.5 mt-0.5">
+                <span className="w-1.5 h-1.5 bg-green-400 rounded-full inline-block" />
+                <span className="text-[11px] text-slate-400">Verified recruiter • 2 days ago</span>
+              </div>
             </div>
           </div>
         </div>
@@ -172,39 +211,53 @@ function Hero() {
 /* ─────────────────────────── SERVICE CARDS ─────────────────────────── */
 function ServiceCards() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-10 md:pb-14">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
-        {/* College */}
+        {/* College Card */}
         <div className="relative flex flex-col bg-white rounded-2xl border border-slate-200 shadow-md p-6 gap-4 overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:border-blue-200 transition-all duration-300">
-          <div className="absolute bottom-0 right-0 w-36 h-36 rounded-tl-[2rem] pointer-events-none opacity-60 bg-gradient-to-tl from-amber-100 to-orange-50" />
-          <div className="flex items-start justify-between relative">
-            <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center text-blue-500">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M2 11l10-7 10 7"/></svg>
+          {/* Card background design from Figma */}
+          <img
+            src="/images/02-service-cards/college card background design.png"
+            alt=""
+            className="absolute bottom-0 right-0 w-36 h-auto pointer-events-none opacity-80"
+          />
+          <div className="flex items-start justify-between relative z-10">
+            <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center p-2 border border-blue-100">
+              <img
+                src="/images/02-service-cards/college icon.png"
+                alt="College"
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="text-[11.5px] font-semibold px-3 py-1 rounded-full border border-slate-200 bg-white text-slate-500">Coming Soon</span>
           </div>
-          <div className="relative"><h3 className="text-[22px] font-extrabold text-slate-900 mb-1.5">College</h3><p className="text-[13.5px] text-slate-500">Explore colleges, courses, fees, placements &amp; more</p></div>
-          <ul className="flex flex-col gap-2.5 relative">
+          <div className="relative z-10"><h3 className="text-[22px] font-extrabold text-slate-900 mb-1.5">College</h3><p className="text-[13.5px] text-slate-500">Explore colleges, courses, fees, placements &amp; more</p></div>
+          <ul className="flex flex-col gap-2.5 relative z-10">
             {["Search by course, location, fees","Connect directly with colleges","Improve student placements"].map(f=>(
               <li key={f} className="flex items-start gap-2.5"><span className="mt-0.5 flex-shrink-0"><Check /></span><span className="text-[13px] text-slate-600">{f}</span></li>
             ))}
           </ul>
-          <button className="relative mt-auto w-full flex items-center justify-center gap-2 py-3 rounded-xl text-[14px] font-semibold text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-[0.98] shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 group">
+          <button className="relative z-10 mt-auto w-full flex items-center justify-center gap-2 py-3 rounded-xl text-[14px] font-semibold text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-[0.98] shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 group">
             Join Waitlist
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
           </button>
         </div>
-        {/* Job */}
+
+        {/* Job Card */}
         <div className="relative flex flex-col bg-white rounded-2xl border border-slate-200 shadow-md p-6 gap-4 overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:border-blue-200 transition-all duration-300">
           <div className="absolute bottom-0 right-0 w-36 h-36 rounded-tl-[2rem] pointer-events-none opacity-60 bg-gradient-to-tl from-blue-100 to-indigo-50" />
-          <div className="flex items-start justify-between relative">
-            <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center text-blue-500">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <div className="flex items-start justify-between relative z-10">
+            <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center p-2 border border-blue-100">
+              <img
+                src="/images/02-service-cards/looking ffor job  icon.png"
+                alt="Job Seeker"
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="text-[11.5px] font-semibold px-3 py-1 rounded-full border border-green-200 bg-green-50 text-green-600">Available Now</span>
           </div>
-          <div className="relative"><h3 className="text-[22px] font-extrabold text-slate-900 mb-1.5">I&apos;m Looking for a Job</h3><p className="text-[13.5px] text-slate-500">Upload your resume. We&apos;ll find jobs that fit you.</p></div>
-          <ul className="flex flex-col gap-2.5 relative">
+          <div className="relative z-10"><h3 className="text-[22px] font-extrabold text-slate-900 mb-1.5">I&apos;m Looking for a Job</h3><p className="text-[13.5px] text-slate-500">Upload your resume. We&apos;ll find jobs that fit you.</p></div>
+          <ul className="flex flex-col gap-2.5 relative z-10">
             {["Jobs from 1000+ sources","AI powered matching","WhatsApp & email alerts"].map(f=>(
               <li key={f} className="flex items-start gap-2.5"><span className="mt-0.5 flex-shrink-0"><Check /></span><span className="text-[13px] text-slate-600">{f}</span></li>
             ))}
@@ -213,31 +266,37 @@ function ServiceCards() {
           <div className="absolute bottom-14 right-3 opacity-75 pointer-events-none">
             <svg width="72" height="72" viewBox="0 0 80 80" fill="none"><rect x="6" y="10" width="48" height="58" rx="5" fill="#EFF6FF" stroke="#BFDBFE" strokeWidth="1.5"/><rect x="13" y="20" width="34" height="4" rx="2" fill="#BFDBFE"/><rect x="13" y="28" width="28" height="3" rx="1.5" fill="#DBEAFE"/><rect x="13" y="34" width="22" height="3" rx="1.5" fill="#DBEAFE"/><circle cx="58" cy="57" r="15" fill="#EFF6FF" stroke="#93C5FD" strokeWidth="2"/><circle cx="55" cy="54" r="7" fill="none" stroke="#3B82F6" strokeWidth="2.5"/><line x1="60" y1="59" x2="68" y2="67" stroke="#3B82F6" strokeWidth="2.5" strokeLinecap="round"/></svg>
           </div>
-          <button className="relative mt-auto w-full flex items-center justify-center gap-2 py-3 rounded-xl text-[14px] font-semibold text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-[0.98] shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 group">
+          <button className="relative z-10 mt-auto w-full flex items-center justify-center gap-2 py-3 rounded-xl text-[14px] font-semibold text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-[0.98] shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 group">
             Explore Jobs
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
         </div>
-        {/* Hiring */}
+
+        {/* Hiring Card */}
         <div className="relative flex flex-col bg-white rounded-2xl border border-slate-200 shadow-md p-6 gap-4 overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:border-blue-200 transition-all duration-300">
-          <div className="absolute bottom-0 right-0 w-36 h-36 rounded-tl-[2rem] pointer-events-none opacity-60 bg-gradient-to-tl from-blue-50 to-slate-100" />
-          <div className="flex items-start justify-between relative">
-            <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center text-blue-500">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          {/* Card background design from Figma */}
+          <img
+            src="/images/02-service-cards/hiring card background design.png"
+            alt=""
+            className="absolute bottom-0 right-0 w-36 h-auto pointer-events-none opacity-80"
+          />
+          <div className="flex items-start justify-between relative z-10">
+            <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center p-2 border border-blue-100">
+              <img
+                src="/images/02-service-cards/hiring icon.png"
+                alt="Hiring"
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="text-[11.5px] font-semibold px-3 py-1 rounded-full border border-slate-200 bg-white text-slate-500">Coming Soon</span>
           </div>
-          <div className="relative"><h3 className="text-[22px] font-extrabold text-slate-900 mb-1.5">I&apos;m Hiring</h3><p className="text-[13.5px] text-slate-500">Connect with colleges and find candidates — from students to graduates.</p></div>
-          <ul className="flex flex-col gap-2.5 relative">
+          <div className="relative z-10"><h3 className="text-[22px] font-extrabold text-slate-900 mb-1.5">I&apos;m Hiring</h3><p className="text-[13.5px] text-slate-500">Connect with colleges and find candidates — from students to graduates.</p></div>
+          <ul className="flex flex-col gap-2.5 relative z-10">
             {["Connect directly with colleges","Find the right candidates","Simplify your hiring"].map(f=>(
               <li key={f} className="flex items-start gap-2.5"><span className="mt-0.5 flex-shrink-0"><Check /></span><span className="text-[13px] text-slate-600">{f}</span></li>
             ))}
           </ul>
-          {/* Hiring illustration */}
-          <div className="absolute bottom-14 right-3 opacity-75 pointer-events-none">
-            <svg width="66" height="66" viewBox="0 0 72 72" fill="none"><rect x="6" y="10" width="56" height="48" rx="6" fill="#EFF6FF" stroke="#BFDBFE" strokeWidth="1.5"/><rect x="6" y="10" width="56" height="14" rx="6" fill="#DBEAFE"/><circle cx="16" cy="17" r="3" fill="#93C5FD"/><circle cx="24" cy="17" r="3" fill="#BFDBFE"/><circle cx="32" cy="17" r="3" fill="#DBEAFE"/><path d="M20 34L14 40L20 46" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M50 34L56 40L50 46" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M38 30L30 50" stroke="#93C5FD" strokeWidth="2" strokeLinecap="round"/></svg>
-          </div>
-          <button className="relative mt-auto w-full flex items-center justify-center gap-2 py-3 rounded-xl text-[14px] font-semibold text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-[0.98] shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 group">
+          <button className="relative z-10 mt-auto w-full flex items-center justify-center gap-2 py-3 rounded-xl text-[14px] font-semibold text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-[0.98] shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 group">
             Join Waitlist
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
           </button>
@@ -254,13 +313,29 @@ function StatsBar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-slate-100">
           {[
-            { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>, bg: "bg-purple-100", value: "800+", label: "Students" },
+            {
+              customIcon: (
+                <img
+                  src="/images/02-service-cards/800 student icon.png"
+                  alt="Students"
+                  className="w-12 h-12 object-contain"
+                />
+              ),
+              value: "800+",
+              label: "Students"
+            },
             { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M2 11l10-7 10 7"/></svg>, bg: "bg-blue-100", value: "130+", label: "colleges" },
             { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>, bg: "bg-green-100", value: "100+", label: "jobs & internships" },
             { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10" strokeWidth="2"/></svg>, bg: "bg-orange-100", value: "100%", label: "Safe & Trusted" },
           ].map(s => (
             <div key={s.label} className="flex items-center gap-4 md:px-8 group cursor-default">
-              <div className={`w-12 h-12 rounded-full ${s.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>{s.icon}</div>
+              {s.customIcon ? (
+                <div className="flex-shrink-0 group-hover:scale-110 transition-transform">
+                  {s.customIcon}
+                </div>
+              ) : (
+                <div className={`w-12 h-12 rounded-full ${s.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>{s.icon}</div>
+              )}
               <div><p className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-none">{s.value}</p><p className="text-[13px] text-slate-500 mt-0.5">{s.label}</p></div>
             </div>
           ))}
@@ -272,28 +347,25 @@ function StatsBar() {
 
 /* ─────────────────────────── PARTNERS ─────────────────────────── */
 function Partners() {
-  const logos = [
-    { name: "GINSERV", color: "#2563EB", sub: "Nurturing Ventures" },
-    { name: "STARTUP\nKARNATAKA", color: "#EA580C", sub: null },
-    { name: "🏛", color: "#92400E", sub: null },
-    { name: "TALENTSPOTIFY", color: "#1e293b", sub: null },
-    { name: "RADIANT\nInfo", color: "#DC2626", sub: null },
-    { name: "D\n#s", color: "#1e293b", sub: null },
+  const partnerLogos = [
+    { src: "/images/03-partners/partner 1.png", alt: "Partner 1" },
+    { src: "/images/03-partners/partner 2.png", alt: "Partner 2" },
+    { src: "/images/03-partners/partneer 3.png", alt: "Partner 3" },
+    { src: "/images/03-partners/partner 4.png", alt: "Partner 4" },
   ];
+
   return (
     <section className="border-t border-slate-100 bg-white py-8 md:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-[13px] text-slate-400 font-medium mb-8">Trusted by partners across India</p>
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
-          {logos.map((l) => (
-            <div key={l.name} className="flex flex-col items-center gap-0.5 opacity-70 hover:opacity-100 transition-opacity cursor-default group">
-              <span
-                className="font-extrabold text-[15px] leading-tight text-center whitespace-pre-line tracking-tight group-hover:scale-105 transition-transform"
-                style={{ color: l.color }}
-              >
-                {l.name}
-              </span>
-              {l.sub && <span className="text-[10px] text-slate-400">{l.sub}</span>}
+        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14 lg:gap-18">
+          {partnerLogos.map((p) => (
+            <div key={p.src} className="flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-default group">
+              <img
+                src={p.src}
+                alt={p.alt}
+                className="h-10 sm:h-12 w-auto max-w-[160px] object-contain group-hover:scale-105 transition-transform"
+              />
             </div>
           ))}
         </div>
@@ -1069,16 +1141,12 @@ function FooterComprehensive() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12 text-left">
           {/* Brand info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-1.5 mb-4">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <path d="M14 4L2 10L14 16L26 10Z" fill="#3B82F6" />
-                <path d="M2 10V17" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" />
-                <path d="M8 13V19C8 19 10 22 14 22C18 22 20 19 20 19V13" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              <span className="text-2xl font-extrabold tracking-tight">
-                <span className="text-blue-500">Campus</span>
-                <span className="text-slate-900">Pe</span>
-              </span>
+            <div className="mb-4">
+              <img
+                src="/images/01-hero/campus_pe logo.png"
+                alt="CampusPe"
+                className="h-11 sm:h-12 w-auto object-contain"
+              />
             </div>
             <p className="text-[14.5px] font-semibold text-slate-800 leading-snug mb-3">
               From choosing a college to finding your next opportunity.
